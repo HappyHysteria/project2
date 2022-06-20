@@ -1,0 +1,9 @@
+<h3 class="text-center">Sub Category</h3>
+<div class="list-group">
+    <button type="button" (click)="onButtonClicked(subCategory.subId)" class="list-group-item list-group-item-action" *ngFor="let subCategory of subCategories">
+      {{subCategory.subName}}
+    </button>
+  </div>
+<!-- <ul class="list-group">
+    <li class="list-group-item" *ngFor="let subCategory of subCategories">{{ subCategory.subName }}</li>
+</ul> -->
