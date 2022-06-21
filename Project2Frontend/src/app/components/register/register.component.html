@@ -1,0 +1,40 @@
+<div class="row">
+    <div class="col-lg-4"></div>
+    <div class="col-lg-4">
+        <div class="wrapper">
+            <h1>Register</h1>
+            <hr />
+            <form #registerForm="ngForm" (ngSubmit)="onSubmitHandler()">
+
+                <div class="form-group">
+                    <label for="">First Name</label>
+                    <input type="text" name="firstName" class="form-control" required [class.is-invalid]="firstName.invalid && firstName.touched" #firstName="ngModel" [(ngModel)]="userModel.firstName">
+                    <small class="text-danger" [class.d-none]="firstName.untouched || firstName.valid">*Frist name is required</small>
+                </div>
+                
+                <div class="form-group">
+                    <label for="">Email</label>
+                    <input type="text" name="email" class="form-control" required [class.is-invalid]="email.invalid && email.touched" #email="ngModel" [(ngModel)]="userModel.email">
+                    <small class="text-danger" [class.d-none]="email.untouched || email.valid">*Email is required</small>
+                </div>
+                <div class="form-group">
+                    <label for="">Mobile</label>
+                    <input type="text" name="mobile" class="form-control" minlength="10" required  [class.is-invalid]="mobile.invalid && mobile.touched" #mobile="ngModel" [(ngModel)]="userModel.mobile">
+                    <small class="text-danger" [class.d-none]="mobile.untouched || mobile.valid">*Mobile number is required</small>
+                </div>
+                <div class="form-group">
+                    <label for="">Password</label>
+                    <input type="password" name="password" class="form-control" minlength="6" required [class.is-invalid]="password.invalid && password.touched" #password="ngModel" [(ngModel)]="userModel.password">
+                    <small class="text-danger" [class.d-none]="password.untouched || password.valid">*Password is required</small>
+                </div>
+
+                <input type="submit" value="Register" [disabled]="registerForm.invalid" class="btn btn-primary btn-block">
+                <br>
+                <a routerLink="/login">Already Registered? Click Here</a>
+            </form>
+
+        </div>
+
+    </div>
+    <div class="col-lg-4"></div>
+</div>
