@@ -10,10 +10,10 @@ export class AuthService {
   constructor(private http: HttpClient) { }
 
   register(data: any): Observable<any>{
-    return this.http.post<any>('http://localhost:4200/register', data)
+    return this.http.post('http://localhost:9000/api/user', data)
   }
 
   login(data: any): Observable<any>{
-    return this.http.post<any>('http://localhost:4200/login', data)
+    return this.http.post<any>('http://localhost:9000/api/user/login', data)
   }
 }

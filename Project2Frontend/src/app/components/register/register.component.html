@@ -8,23 +8,19 @@
 
                 <div class="form-group">
                     <label for="">First Name</label>
-                    <input type="text" name="firstName" class="form-control" required [class.is-invalid]="firstName.invalid && firstName.touched" #firstName="ngModel" ngModel>
-                    <small class="text-danger" [class.d-none]="firstName.untouched || firstName.valid">*Name is required</small>
+                    <input type="text" name="name" class="form-control" required [class.is-invalid]="name.invalid && name.touched" #name="ngModel" [(ngModel)]="userModel.name">
+                    <small class="text-danger" [class.d-none]="name.untouched || name.valid">*Name is required</small>
                 </div>
-                
+
                 <div class="form-group">
                     <label for="">Email</label>
-                    <input type="text" name="email" class="form-control" required [class.is-invalid]="email.invalid && email.touched" #email="ngModel" ngModel>
+                    <input type="text" name="email" class="form-control" required [class.is-invalid]="email.invalid && email.touched" #email="ngModel" [(ngModel)]="userModel.email">
                     <small class="text-danger" [class.d-none]="email.untouched || email.valid">*Email is required</small>
                 </div>
-                <div class="form-group">
-                    <label for="">Username</label>
-                    <input type="text" name="username" class="form-control" required  [class.is-invalid]="username.invalid && username.touched" #username="ngModel" ngModel>
-                    <small class="text-danger" [class.d-none]="username.untouched || username.valid">*Username is required</small>
-                </div>
+
                 <div class="form-group">
                     <label for="">Password</label>
-                    <input type="password" name="password" class="form-control" minlength="6" required [class.is-invalid]="password.invalid && password.touched" #password="ngModel" ngModel>
+                    <input type="password" name="password" class="form-control" minlength="6" required [class.is-invalid]="password.invalid && password.touched" #password="ngModel" [(ngModel)]="userModel.password">
                     <small class="text-danger" [class.d-none]="password.untouched || password.valid">*Password is required</small>
                 </div>
 
