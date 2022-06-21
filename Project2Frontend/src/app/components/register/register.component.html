@@ -8,23 +8,23 @@
 
                 <div class="form-group">
                     <label for="">First Name</label>
-                    <input type="text" name="firstName" class="form-control" required [class.is-invalid]="firstName.invalid && firstName.touched" #firstName="ngModel" [(ngModel)]="userModel.firstName">
-                    <small class="text-danger" [class.d-none]="firstName.untouched || firstName.valid">*Frist name is required</small>
+                    <input type="text" name="firstName" class="form-control" required [class.is-invalid]="firstName.invalid && firstName.touched" #firstName="ngModel" ngModel>
+                    <small class="text-danger" [class.d-none]="firstName.untouched || firstName.valid">*Name is required</small>
                 </div>
                 
                 <div class="form-group">
                     <label for="">Email</label>
-                    <input type="text" name="email" class="form-control" required [class.is-invalid]="email.invalid && email.touched" #email="ngModel" [(ngModel)]="userModel.email">
+                    <input type="text" name="email" class="form-control" required [class.is-invalid]="email.invalid && email.touched" #email="ngModel" ngModel>
                     <small class="text-danger" [class.d-none]="email.untouched || email.valid">*Email is required</small>
                 </div>
                 <div class="form-group">
-                    <label for="">Mobile</label>
-                    <input type="text" name="mobile" class="form-control" minlength="10" required  [class.is-invalid]="mobile.invalid && mobile.touched" #mobile="ngModel" [(ngModel)]="userModel.mobile">
-                    <small class="text-danger" [class.d-none]="mobile.untouched || mobile.valid">*Mobile number is required</small>
+                    <label for="">Username</label>
+                    <input type="text" name="username" class="form-control" required  [class.is-invalid]="username.invalid && username.touched" #username="ngModel" ngModel>
+                    <small class="text-danger" [class.d-none]="username.untouched || username.valid">*Username is required</small>
                 </div>
                 <div class="form-group">
                     <label for="">Password</label>
-                    <input type="password" name="password" class="form-control" minlength="6" required [class.is-invalid]="password.invalid && password.touched" #password="ngModel" [(ngModel)]="userModel.password">
+                    <input type="password" name="password" class="form-control" minlength="6" required [class.is-invalid]="password.invalid && password.touched" #password="ngModel" ngModel>
                     <small class="text-danger" [class.d-none]="password.untouched || password.valid">*Password is required</small>
                 </div>
 

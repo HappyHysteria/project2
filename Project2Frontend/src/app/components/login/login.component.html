@@ -6,9 +6,9 @@
             <hr />
             <form #loginForm="ngForm" (ngSubmit)="onSubmitHandler(loginForm.value)"> 
                 <div class="form-group">
-                    <label for="">Email</label>
-                    <input type="text" name="email" class="form-control" required [class.is-invalid]="email.invalid && email.touched" #email="ngModel" ngModel>
-                    <small class="text-danger" [class.d-none]="email.untouched || email.valid">*Email is required</small>
+                    <label for="">Username</label>
+                    <input type="text" name="username" class="form-control" required [class.is-invalid]="username.invalid && username.touched" #username="ngModel" ngModel>
+                    <small class="text-danger" [class.d-none]="username.untouched || username.valid">*Username is required</small>
                 </div>
                 <div class="form-group">
                     <label for="">Password</label>
@@ -16,7 +16,7 @@
                     <small class="text-danger" [class.d-none]="password.untouched || password.valid">*Password is required</small>
                 </div>
 
-                <input type="submit" value="Login" [disabled]="loginForm.invalid" class="btn btn-primary btn-block" routerLink="/home">
+                <input type="submit" value="Login" [disabled]="loginForm.invalid" class="btn btn-primary btn-block" />
                 <br>
                 <a routerLink="/register">New User? Click Here</a>
             </form>

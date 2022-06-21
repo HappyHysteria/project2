@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
-import java.util.UUID;
 
 @Service
 @Transactional
@@ -20,14 +19,15 @@ public class UserService {
     }
 
     public User addUser(User user) {
-        user.setUsername(user.getUsername());
-        user.setEmail(user.getEmail());
-        user.setPassword(user.getPassword());
-        user.setName(user.getName());
+//        user.setUsername(user.getUsername());
+//        user.setEmail(user.getEmail());
+//        user.setPassword(user.getPassword());
+//        user.setName(user.getName());
         return userRepo.save(user);
     }
 
-    public User login(User user){
-        return userRepo.findByUsernameAndPassword(user.getUsername(), user.getPassword());
+    public User login(String username, String password){
+        User user = userRepo.findByUsernameAndPassword(username, password).orElseThrow(() -> new UserNotFound("Login failed"));
+        return user;
     }
 }

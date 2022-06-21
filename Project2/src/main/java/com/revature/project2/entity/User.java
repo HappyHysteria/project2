@@ -13,7 +13,6 @@ public class User implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(nullable = false, updatable = false)
-    private Long userId;
     private String username;
     private String name;
     private String email;
@@ -21,20 +20,11 @@ public class User implements Serializable {
 
     public User() {}
 
-    public User(Long userId, String username, String email, String name, String password) {
-        this.userId = userId;
+    public User(String username, String email, String name, String password) {
         this.name = name;
         this.email = email;
         this.username = username;
         this.password = password;
-    }
-
-    public void setUserId(Long userId) {
-        this.userId = userId;
-    }
-
-    public Long getUserId() {
-        return userId;
     }
 
     public void setName(String name) {
@@ -72,7 +62,6 @@ public class User implements Serializable {
     @Override
     public String toString() {
         return "User{" +
-                "userId=" + userId +
                 ", username='" + username + '\'' +
                 ", name='" + name + '\'' +
                 ", email='" + email + '\'' +

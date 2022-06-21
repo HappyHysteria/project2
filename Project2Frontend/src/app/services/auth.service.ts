@@ -10,10 +10,10 @@ export class AuthService {
   constructor(private http: HttpClient) { }
 
   register(data: any): Observable<any>{
-    return this.http.post<any>('https://apolis-grocery.herokuapp.com/api/auth/register', data)
+    return this.http.post<any>('http://localhost:4200/register', data)
   }
 
-  login(data: any){
-    return this.http.post<any>('https://apolis-grocery.herokuapp.com/api/auth/login', data)
+  login(data: any): Observable<any>{
+    return this.http.post<any>('http://localhost:4200/login', data)
   }
 }

@@ -23,6 +23,7 @@ import { AboutPageComponent } from './pages/about-page/about-page.component';
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 
 
+
  
 
 
@@ -34,7 +35,6 @@ import { ContactPageComponent } from './pages/contact-page/contact-page.componen
     HeaderComponent,
     SidebarComponent,
     FooterComponent,
-    LoginComponent,
     RegisterComponent,
     CategoryComponent,
     HomePageComponent,
@@ -44,9 +44,9 @@ import { ContactPageComponent } from './pages/contact-page/contact-page.componen
     ErrorComponent,
     BodyComponent,
     AboutPageComponent,
-    ContactPageComponent
+    ContactPageComponent,
+    LoginComponent
 
-  
   ],
   imports: [
     BrowserModule,
